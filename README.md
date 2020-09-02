@@ -11,18 +11,27 @@
 
 Project Latihan Form Input Sederhana untuk memahami dan mempraktekkan mata pelajaran Pemrograman web dan perangkat bergerak pada kompetensi dasar : Pemrograman Web dengan Konsep MVC dan Pemrograman dengan Framework , khususnya framework php dengan laravel
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Daftar Video Pembelajaran dalam Studi Kasus PPDB sederhana
+- [Konsep MVC dalam Laravel](https://youtu.be/nppJ-0BJ2hM).
+- [Penerapan Routing pada Larave](https://youtu.be/cgebhXvg4ao).
+- Penerapan Routing pada laravel [Part 2](https://youtu.be/nkxu67piHV8) 
+- View Blade dan Error Handling (https://youtu.be/QquAmXmIAcE).
+- Penerapan View Blade dan Routing Integrasi Bootstrap (https://youtu.be/dB-K0MS9Rms).
+- Penerapan Dan Pembuatan Controller Pada Laravel (https://youtu.be/rN_YH-2FeHs).
+- Migration Dalam Laravel (https://youtu.be/vo94elQGvmw).
+- Query Laravel Dengan DB Facaces (https://youtu.be/C5uR4sE9Xc0)
+- Eloquent Dan Query Builder dalam Laravel (https://youtu.be/vmTRcHrBV9w)
+- Form Processing dan Validation dalam Laravel (https://youtu.be/cBitixlgflk)
+- Form Validasi Input Terpisah (https://youtu.be/aq_h52fHwBE)
+- Membuat Custom Message pada Laravel (https://youtu.be/njEdOBPqF0w)
+- Membuat Crud Laravel [Create Form] (https://youtu.be/dhwmKuxOqvk)
+- Membuat Crud Laravel [Tampil Data] (https://youtu.be/JLH4waD-sKY)
+- Membuat Crud Laravel [Detail View] (https://youtu.be/L3MuVoId71M)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Seluruh Video Pembelajaran di atas masih dalam tahap pengembangan dan finishing jika ada vide yang terbaru akan di update juga di file index ini.
 
 
 
-## License
+## Quote
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Selalu haus akan ilmu [Ilmu yang Bermanfaat akan menjadi amal jariah kita ]
