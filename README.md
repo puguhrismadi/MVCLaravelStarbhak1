@@ -13,7 +13,7 @@ Project Latihan Form Input Sederhana untuk memahami dan mempraktekkan mata pelaj
 
 ## Daftar Video Pembelajaran dalam Studi Kasus PPDB sederhana
 - [Konsep MVC dalam Laravel](https://youtu.be/nppJ-0BJ2hM).
-- [Penerapan Routing pada Larave](https://youtu.be/cgebhXvg4ao).
+- [Penerapan Routing pada Laravel](https://youtu.be/cgebhXvg4ao).
 - Penerapan Routing pada laravel [Part 2](https://youtu.be/nkxu67piHV8) 
 - View Blade dan Error Handling (https://youtu.be/QquAmXmIAcE).
 - Penerapan View Blade dan Routing Integrasi Bootstrap (https://youtu.be/dB-K0MS9Rms).
