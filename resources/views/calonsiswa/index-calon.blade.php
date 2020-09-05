@@ -19,7 +19,13 @@
             <h2 class="mr-auto">Tabel Data Calon Siswa</h2>
              <a href="{{ route('calonsiswa.create') }}" class="btn btn-success">Tambah Data</a>
             </div>
-   
+   @if(session()->has('pesan'))
+        <div class="alert alert-success">{{ session()->get('pesan') }}</div>
+   @endif
+
+   @if(session()->has('pesanhapus'))
+   <div class="alert alert-danger">{{ session()->get('pesanhapus') }}</div>
+   @endif
         <table class="table table-bordered">
             <tr>
                 <td>No</td>
@@ -39,7 +45,7 @@
                 <td>{{ $itemSiswa->asal_sekolah }}</td>
                 <td>{{ $itemSiswa->pilihan1 }}</td>
                 <td>{{ $itemSiswa->pilihan2 }}</td>
-                <td> <a href="#">detail</a></td>
+        <td> <a href="{{ url("calonsiswa/$itemSiswa->id") }}">detail</a> <a href="{{ url("hapussiswa/$itemSiswa->id") }}">hapus</a></td>
         </tr>
                 @empty
                     <td colspan="7">Tidak Ada Data</td>

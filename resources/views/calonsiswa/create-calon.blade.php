@@ -17,7 +17,7 @@
 <body>
     <div class="container pt-4 bg-white">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <h1>Form Daftar Calon Siswa</h1>
                 <h2>SMK Taruna Bhakti Depok</h2>
             <form action="{{ url('/calonsiswa') }}" method="post">

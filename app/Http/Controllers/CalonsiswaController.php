@@ -15,6 +15,11 @@ class CalonsiswaController extends Controller
     public function create(){
         return view('calonsiswa.create-calon');
     }
+    public function delete(Calonsiswa $calonsiswa){
+       // dd($calonsiswa);
+       $calonsiswa->delete();
+       return redirect()->route('calonsiswa.index-calon')->with('pesanhapus',"Hapus Data $calonsiswa->nama berhasil");
+    }
     public function store(Request $request){
         $validateData = $request->validate([
             'noppdb'=>'required|size:10',
@@ -36,8 +41,9 @@ class CalonsiswaController extends Controller
         $calonsiswa->nohp = $validateData['nohp'];
         $calonsiswa->save();
 
-        return "Data Berhasil Di simpan Ke database";
-
+        //return "Data Berhasil Di simpan Ke database";
+        $request->session()->flash('pesan',"Penambahan data baru berhasil ,Data {$validateData['nama']} ");
+        return redirect()->route('calonsiswa.index-calon');
     }
     public function show($calonsiswa){
         //dd($calonsiswa);
