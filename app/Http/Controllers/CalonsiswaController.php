@@ -15,6 +15,27 @@ class CalonsiswaController extends Controller
     public function create(){
         return view('calonsiswa.create-calon');
     }
+    //view edit
+    public function viewform(Calonsiswa $calonsiswa){
+        //dd($calonsiswa);
+        return view('calonsiswa.form-edit',['calonsiswa'=>$calonsiswa]);
+    }
+     //proses edit
+     public function prosesedit(Request $request,Calonsiswa $calonsiswa){
+        $validateData = $request->validate([
+            'noppdb'=>'required|size:10',
+            'nama'=>'required|min:3|max:60',
+            'asal_sekolah'=>'required',
+            'pilihan1'=>'required',
+            'pilihan2'=>'required',
+            'alamat'=>'required',
+            'nohp'=>''
+        ]);
+        //dd($validateData);
+        Calonsiswa::where('id',$calonsiswa->id)->update($validateData);
+        return redirect()->route('calonsiswa.index-calon',['calonsiswa'=>$calonsiswa->id])->with('pesan',"Data Form {$validateData['nama']} Berhasil di ubah ");
+        //return view('calonsiswa.form-edit',['calonsiswa'=>$calonsiswa]);
+    }
     public function delete(Calonsiswa $calonsiswa){
        // dd($calonsiswa);
        $calonsiswa->delete();

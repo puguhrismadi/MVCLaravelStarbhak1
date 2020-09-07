@@ -22,6 +22,11 @@ Route::post('/calonsiswa','CalonsiswaController@store')->name('calonsiswa.store'
 //untuk hapus calon siswa 
 Route::get('/hapussiswa/{calonsiswa}','CalonsiswaController@delete')->name('calonsiswa.delete');
 
+//untuk view form calon siswa 
+Route::get('/calonsiswa/{calonsiswa}/edit','CalonsiswaController@viewform')->name('calonsiswa.view-edit');
+//untuk Proses Update
+Route::patch('/updatesiswa/{calonsiswa}','CalonsiswaController@prosesedit')->name('calonsiswa.proses-edit');
+
 //routing tampil 1 data dengan parameter dan alias
 Route::get('/calonsiswa/{calonsiswa}','CalonsiswaController@show')->name('calonsiswa.detail');
 

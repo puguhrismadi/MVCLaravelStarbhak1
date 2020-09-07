@@ -54,7 +54,7 @@
                     <label for="nohp">Nomor Handphone</label>
                     <div class="badge badge-secondary">{{ $calonsiswa->nohp }} </div>
                 <hr>
-             
+                <a class="btn btn-success" href="{{ url("calonsiswa/$calonsiswa->id/edit") }}">Edit Data</a> <a class="btn btn-danger" href="#">Hapus</a>
 
             </div>
         </div>

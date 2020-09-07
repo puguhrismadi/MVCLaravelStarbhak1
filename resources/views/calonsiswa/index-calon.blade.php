@@ -45,7 +45,7 @@
                 <td>{{ $itemSiswa->asal_sekolah }}</td>
                 <td>{{ $itemSiswa->pilihan1 }}</td>
                 <td>{{ $itemSiswa->pilihan2 }}</td>
-        <td> <a href="{{ url("calonsiswa/$itemSiswa->id") }}">detail</a> <a href="{{ url("hapussiswa/$itemSiswa->id") }}">hapus</a></td>
+        <td> <a class="badge badge-primary" href="{{ url("calonsiswa/$itemSiswa->id") }}">detail</a> <a class="badge badge-danger" href="{{ url("hapussiswa/$itemSiswa->id") }}">hapus</a></td>
         </tr>
                 @empty
                     <td colspan="7">Tidak Ada Data</td>

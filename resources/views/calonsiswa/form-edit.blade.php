@@ -18,15 +18,16 @@
     <div class="container pt-4 bg-white">
         <div class="row">
             <div class="col-md-8">
-                <h1>Form Daftar Calon Siswa</h1>
+                <h1>Form Edit Data Calon Siswa</h1>
                 <h2>SMK Taruna Bhakti Depok</h2>
-            <form action="{{ url('/calonsiswa') }}" method="post">
+            <form action="{{ route('calonsiswa.proses-edit',['calonsiswa'=>$calonsiswa->id]) }}" method="post">
+                @method('PATCH')
                 @csrf
                 <div class="form-group">
                     <label for="noppdb">Nomor PPDB</label>
                     <input 
                     class="form-control @error('noppdb') is-invalid @enderror"
-                type="text" name="noppdb" id="noppdb" value="{{ old('noppdb') }}"  >
+                type="text" name="noppdb" id="noppdb" value="{{ $calonsiswa->noppdb }}"  >
                 @error('noppdb')    
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
@@ -36,7 +37,7 @@
                     <label for="nama">Nama Calon Siswa</label>
                     <input 
                     class="form-control @error('nama') is-invalid @enderror"
-                type="text" name="nama" id="nama" value="{{ old('nama') }}"  >
+                type="text" name="nama" id="nama" value="{{ $calonsiswa->nama }}"  >
                 @error('nama')    
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
@@ -46,7 +47,7 @@
                     <label for="asal_sekolah">Asal Sekolah</label>
                     <input 
                     class="form-control @error('asal_sekolah') is-invalid @enderror"
-                type="text" name="asal_sekolah" id="asal_sekolah" value="{{ old('asal_sekolah') }}"  >
+                type="text" name="asal_sekolah" id="asal_sekolah" value="{{ $calonsiswa->asal_sekolah }}"  >
                 @error('asal_sekolah')    
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
@@ -55,7 +56,7 @@
                 <div class="form-group">
                     <label for="pilihan1">Pilihan Jurusan 1</label>
                     <select class="form-control @error('pilihan1') is-invalid @enderror" name="pilihan1" id="pilihan2">
-                       <option value="{{ old('pilihan1') }} ">{{ old('pilihan1') }}</option>
+                       <option value="{{ $calonsiswa->pilihan1 }} ">{{ $calonsiswa->pilihan1 }}</option>
                        <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
                         <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan jaringan</option>
                         <option value="Multimedia">Multimedia</option>
@@ -71,7 +72,7 @@
                 <div class="form-group">
                     <label for="pilihan1">Pilihan Jurusan 2</label>
                     <select class="form-control @error('pilihan2') is-invalid @enderror" name="pilihan2" id="pilihan2">
-                       <option value="{{ old('pilihan2') }} ">{{ old('pilihan2') }}</option>
+                       <option value="{{ $calonsiswa->pilihan2 }} ">{{ $calonsiswa->pilihan2}}</option>
                         <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
                         <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan jaringan</option>
                         <option value="Multimedia">Multimedia</option>
@@ -88,7 +89,7 @@
                     <label for="alamat">Alamat</label>
                     <input 
                     class="form-control @error('alamat') is-invalid @enderror"
-                type="text" name="alamat" id="alamat" value="{{ old('alamat') }}"  >
+                type="text" name="alamat" id="alamat" value="{{ $calonsiswa->alamat }}"  >
                 @error('alamat')    
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
@@ -97,13 +98,13 @@
                     <label for="nohp">Nomor HP</label>
                     <input 
                     class="form-control @error('nohp') is-invalid @enderror"
-                type="text" name="nohp" id="nohp" value="{{ old('nohp') }}"  >
+                type="text" name="nohp" id="nohp" value="{{ $calonsiswa->nohp }}"  >
                 @error('nohp')    
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
                 </div>
                 <hr>
-                <button class="btn btn-primary" type="submit">Daftar</button>
+                <button class="btn btn-primary" type="submit">Update</button>
             </form>
 
             </div>
