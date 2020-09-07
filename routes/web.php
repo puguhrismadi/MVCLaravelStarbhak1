@@ -21,11 +21,11 @@ Route::get('/calonsiswa/create','CalonsiswaController@create')->name('calonsiswa
 Route::post('/calonsiswa','CalonsiswaController@store')->name('calonsiswa.store');
 //untuk hapus calon siswa 
 Route::get('/hapussiswa/{calonsiswa}','CalonsiswaController@delete')->name('calonsiswa.delete');
+//untuk menampilkan data berdasarkan id di view form edit
+Route::get('/calonsiswa/{calonsiswa}/edit',"CalonsiswaController@viewform");
 
-//untuk view form calon siswa 
-Route::get('/calonsiswa/{calonsiswa}/edit','CalonsiswaController@viewform')->name('calonsiswa.view-edit');
-//untuk Proses Update
-Route::patch('/updatesiswa/{calonsiswa}','CalonsiswaController@prosesedit')->name('calonsiswa.proses-edit');
+//untuk proses edit 
+Route::patch('/calonsiswa/{calonsiswa}','CalonsiswaController@prosesEdit');
 
 //routing tampil 1 data dengan parameter dan alias
 Route::get('/calonsiswa/{calonsiswa}','CalonsiswaController@show')->name('calonsiswa.detail');

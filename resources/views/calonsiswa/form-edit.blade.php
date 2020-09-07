@@ -17,10 +17,10 @@
 <body>
     <div class="container pt-4 bg-white">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <h1>Form Edit Data Calon Siswa</h1>
                 <h2>SMK Taruna Bhakti Depok</h2>
-            <form action="{{ route('calonsiswa.proses-edit',['calonsiswa'=>$calonsiswa->id]) }}" method="post">
+            <form action="{{ url('/calonsiswa',['calonsiswa'=>$calonsiswa->id]) }}" method="post">
                 @method('PATCH')
                 @csrf
                 <div class="form-group">
@@ -56,7 +56,7 @@
                 <div class="form-group">
                     <label for="pilihan1">Pilihan Jurusan 1</label>
                     <select class="form-control @error('pilihan1') is-invalid @enderror" name="pilihan1" id="pilihan2">
-                       <option value="{{ $calonsiswa->pilihan1 }} ">{{ $calonsiswa->pilihan1 }}</option>
+                       <option selected="selected" value="{{ $calonsiswa->pilihan1 }} ">{{ $calonsiswa->pilihan1 }}</option>
                        <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
                         <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan jaringan</option>
                         <option value="Multimedia">Multimedia</option>
@@ -72,7 +72,7 @@
                 <div class="form-group">
                     <label for="pilihan1">Pilihan Jurusan 2</label>
                     <select class="form-control @error('pilihan2') is-invalid @enderror" name="pilihan2" id="pilihan2">
-                       <option value="{{ $calonsiswa->pilihan2 }} ">{{ $calonsiswa->pilihan2}}</option>
+                       <option value="{{ $calonsiswa->pilihan2 }} ">{{ $calonsiswa->pilihan2 }}</option>
                         <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
                         <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan jaringan</option>
                         <option value="Multimedia">Multimedia</option>
@@ -104,7 +104,7 @@
                 @enderror
                 </div>
                 <hr>
-                <button class="btn btn-primary" type="submit">Update</button>
+                <button class="btn btn-primary" type="submit">Daftar</button>
             </form>
 
             </div>
